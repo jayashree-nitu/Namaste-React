@@ -1,0 +1,18 @@
+/node_modules
+/.parcel-cache
+/.dist
+^ => minor upgrades
+~ => major upgrades
+nothing => fixed
+
+npx=>execute the parcel
+npm=>calling the command npm
+another way to react into our app npm
+cdn links is not good way
+
+jsx have only one parent element
+component composition=>component inside component
+cross-side 
+when you  have to dynamicly passing some data to a component you pass in as a prop.
+config driven ui=>controlling your ui how the ui looks like using config (data)
+config comes from backend
