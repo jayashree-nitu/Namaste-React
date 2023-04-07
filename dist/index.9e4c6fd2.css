@@ -5,7 +5,7 @@
 }
 
 .logo {
-  width: 200px;
+  width: 180px;
 }
 
 .nav-items {
@@ -13,7 +13,7 @@
 }
 
 .nav-items > ul {
-  font-size: 24px;
+  font-size: 22px;
   list-style-type: none;
   display: flex;
 }
@@ -24,13 +24,16 @@
 }
 
 .res-container {
+  width: full-width;
   flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
 }
 
 .res-card {
-  width: 200px;
-  margin: 5px;
+  width: 180px;
+  margin: 10px;
   padding: 5px;
 }
 
