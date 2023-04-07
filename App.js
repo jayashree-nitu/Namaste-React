@@ -1,37 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-/**
- *
- * <div id="parent">
- *      <div id="child">
- *         <h1>I'm h1 tag</h1>
- *         <h2>I'm h1 tag</h2>
- *      </div>
- * <div id="child2">
- *         <h1>I'm h1 tag</h1>
- *         <h2>I'm h1 tag</h2>
- *      </div>
- * </div>
- *
- * ReactElement(Object) => HTML(Browser Understands)
- */
+//React Element
+// const heading =React.createElement(
+//   "h1",
+//   {id:"heading"},
+//   "Namaste React 🚀"
+//   );
+const Title = () => (
+  <h1 className="head" TabIndex="5">
+    Namaste React 🚀
+  </h1>
+);
+const elem = <span>React Element</span>;
+const title = (
+  <h1 className="head" TabIndex="5">
+    {elem}
+    Namaste React using JSX🚀
+    <Title />
+  </h1>
+);
+//sconst data = api.getData();
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "This is Namaste React 🚀"),
-
-    React.createElement("h2", {}, "by Akshay Saini"),
-  ]),
-
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-]);
-
-console.log(parent); // object
-
+//Component  Composition
+const HeaderComponent = () => (
+  <React.Fragment>
+    <>
+      <div id="container">
+        {title}
+        <Title />
+        {Title()}
+        {5 + 8}
+        <Title></Title>
+        <h1 className="heading">Namaste React Fuctional Component </h1>
+      </div>
+      <div></div>
+    </>
+  </React.Fragment>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(parent);
+root.render(<HeaderComponent />);
